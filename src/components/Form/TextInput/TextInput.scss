@@ -1,0 +1,32 @@
+@import "../../../StyleVariables.scss";
+
+.TextInput{
+    width: 100%;
+    margin: 20px auto;
+    .TextInput-label{
+        font-size: $label-font-size;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+    .TextInput-input{
+        font-size: $input-font-size;
+        width: 100%;
+        border:none;
+        border-bottom: 2px solid $stroke-color;
+        padding: 5px;
+
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover{
+            background-color: $input-hover;
+        }
+    }
+
+    
+}
