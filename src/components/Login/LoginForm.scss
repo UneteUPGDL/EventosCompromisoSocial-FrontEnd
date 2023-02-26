@@ -1,21 +1,23 @@
 @import "../../StyleVariables.scss";
 .LoginForm{
+
     width: 100%;
-    max-width: 400px;
-    margin: auto;
-    display: grid;
-    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    box-shadow: 10px 10px 10px 5px  $light-grey;
     border-radius: 5px;
-    justify-content: center;
 
     .LoginForm-title{
         padding: 20px 10px;
         text-align: center;
+        width: 100%;
     }
 
+
     .LoginForm-button{
+        margin: 25px auto 10px;
+        display: block;
+        width: 80%;
         padding: 10px;
         font-weight: bold;
         font-size: $input-font-size;

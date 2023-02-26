@@ -1,13 +1,10 @@
 import "./LoginForm.scss"
 
 //* Tools
-import { ButtonHTMLAttributes, FormEventHandler, MouseEventHandler, useState } from "react"
+import { useState, FormEvent } from "react"
 
 //* Components
 import TextInput from '../Form/TextInput/TextInput'
-
-
-
 
 function LoginForm(): JSX.Element {
     const [formInformation, setFormInformation] = useState({
@@ -39,7 +36,7 @@ function LoginForm(): JSX.Element {
         })
     }
 
-    const handleSubmit: any = (evt: SubmitEvent) => {
+    const handleSubmit = (evt: FormEvent) => {
         evt.preventDefault();
         console.log(formInformation);
     }

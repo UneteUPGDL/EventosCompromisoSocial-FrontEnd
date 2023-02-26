@@ -6,6 +6,7 @@ import { Redirect } from "wouter";
 
 //* Components
 import LoginForm from "../../components/Login/LoginForm";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Login(): JSX.Element {
     const user = useSelector((state: any) => state.user);
@@ -14,7 +15,9 @@ function Login(): JSX.Element {
     if (user.loggedIn) return <Redirect to="dashboard" />;
 
     return (
+
         <div className="Login">
+            <Navbar />
             <LoginForm />
         </div>
     )
