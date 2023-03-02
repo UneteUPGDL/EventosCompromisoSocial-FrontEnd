@@ -53,14 +53,51 @@ h1,h2,h3{
     color: $highlight;
 }
 
+
+
 .secondaryButton{
     color: $button-background;
     background: $button-foreground;
+
+    &:hover{
+        background-color: $button-background;
+        border-color: $button-background;
+        color: $button-foreground;
+    }
 }
 
-.secondaryButton:hover{
-    background-color: $button-background;
-    border-color: $button-background;
-    color: $button-foreground;
+.destructiveButton{
+    color: $button-foreground; 
+    background-color: $destructive-color;
+    border-color: $destructive-color;
 
+    &:hover{
+        background-color: red;
+        border-color: red;
+    }  
+}
+
+.destructiveSecondaryButton{
+    color: $destructive-color; 
+    background-color: $button-foreground;
+    border-color: $destructive-color;
+
+    &:hover{
+        background-color: $destructive-color;
+        border-color: $destructive-color;
+        color: $button-foreground;
+    }  
+}
+
+button:disabled{
+    border-color: $button-disable-bg;
+    background-color: $button-disable-bg;
+    color: $button-disable-fg;
+}
+
+button:disabled:hover{
+    cursor:default;
+    border-color: $button-disable-bg;
+    background-color: $button-disable-bg;
+    color: $button-disable-fg;
 }

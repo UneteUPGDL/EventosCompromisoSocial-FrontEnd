@@ -22,4 +22,18 @@
         font-weight: bold;
         font-size: $input-font-size;
     }
+
+    .LoginForm-error-text{
+        color: $tertiary-color;
+        text-transform: capitalize;
+
+        &::before{
+            content: "*";
+            font-weight: bold;
+        }
+        &:empty::before{
+            content: "";
+        }
+        
+    }
 }

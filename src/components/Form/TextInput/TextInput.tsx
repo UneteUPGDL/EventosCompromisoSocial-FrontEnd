@@ -9,12 +9,13 @@ import "./TextInput.scss";
  * @property {string | null} placeholder the placeholder of the input field
  * @property {function | null} updateState function to send the value of input on change event
  */
-interface TextInputOptions {
+export interface TextInputOptions {
     type: string,
     name: string,
     label: string,
     placeholder?: string,
     updateState?: Function
+    value?: any
 }
 
 /**

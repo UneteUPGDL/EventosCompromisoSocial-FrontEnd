@@ -6,15 +6,19 @@ $title-color: #094067;
 $stroke-color: #094067;
 $secondary-color: #90b4ce;
 $tertiary-color: #ef4565;
+$destructive-color: #ef4565;
+$highlight: #3da9fc;
+$light-grey: #efefef;
 
 $input-hover: #efefef;
 
 $button-background: #3da9fc;
 $button-foreground: #fefefe;
 $button-hover: #094067;
+$button-disable-bg: $light-grey;
+$button-disable-fg: $font-color;
 
-$highlight: #3da9fc;
-$light-grey: #efefef;
+
 
 //FONT SIZE
 $input-font-size: 1.1rem;

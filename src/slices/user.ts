@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AnyAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface userState {
     loggedIn: boolean;
@@ -22,7 +22,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setLogin: state => {
+        toggleLogin: state => {
             state.loggedIn = !state.loggedIn;
         },
 
@@ -37,10 +37,15 @@ export const userSlice = createSlice({
         setRole: (state, action: PayloadAction<string>) => {
             state.role = action.payload;
         },
+
+        setUsername: (state, action: PayloadAction<string>) => {
+            state.username = action.payload;
+            return;
+        },
     },
 });
 
-export const { setLogin, setFirstName, setLastName, setRole } =
+export const { toggleLogin, setUsername, setFirstName, setLastName, setRole } =
     userSlice.actions;
 
 export default userSlice.reducer;
