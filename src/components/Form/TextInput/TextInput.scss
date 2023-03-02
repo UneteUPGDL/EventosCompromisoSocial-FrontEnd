@@ -3,6 +3,23 @@
 .TextInput{
     width: 100%;
     margin: 20px auto;
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 0%;
+        height: 2px;
+        bottom: 0px;
+        left: 0;
+        display: block;
+        position: absolute;
+        background-color: $highlight;
+        transition: width 0.3s ease;
+    }
+
+    &:has(.TextInput-input:focus)::after, &:has(.TextInput-input:hover)::after  {
+        width: 100%;
+    }
     
     .TextInput-label{
         font-size: $label-font-size;
@@ -22,12 +39,12 @@
 
         &:focus{
             outline: none;
+            border-bottom-color:transparent;
         }
 
         &:hover{
             background-color: $input-hover;
+            border-bottom-color:transparent;
         }
     }
-
-    
 }

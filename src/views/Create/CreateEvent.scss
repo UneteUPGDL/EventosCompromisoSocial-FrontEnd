@@ -1,0 +1,12 @@
+.CreateEvent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .CreateForm{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20%;
+    }
+}
